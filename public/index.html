@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.101/Build/Cesium/Cesium.js"></script>
+    <!-- <link
+      rel="preload"
+      as="script"
+      type="text/javascript"
+      crossorigin="anonymous"
+      href="https://cesium.com/downloads/cesiumjs/releases/1.101/Build/Cesium/Cesium.js"
+    /> -->
+    <link
+      href="https://cesium.com/downloads/cesiumjs/releases/1.101/Build/Cesium/Widgets/widgets.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <script>
+      // Your access token can be found at: https://ion.cesium.com/tokens.
+      // This is the default access token from your ion account
+
+      Cesium.Ion.defaultAccessToken =
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwODZhMzdlOS04MDM5LTQxNzEtYmQwZC0yMGFlZjAxYWVlYWIiLCJpZCI6MTIwMTgzLCJpYXQiOjE2NzI3NjM2ODl9.EKeszPWKVPaM0SapxbyBrEa0-iMKHxYsysqg9eslqh4'
+    </script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
