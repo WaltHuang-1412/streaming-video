@@ -25,7 +25,11 @@ export interface IPigeonItem {
 }
 
 export interface IResponse<T> {
-  data: T
-  result_code: string
-  result_message: string
+  items: T
+}
+
+export interface ITestResponse {
+  title: string
+  cover: string
+  play_url: string
 }

@@ -27,6 +27,8 @@ export default defineComponent({
 @import '@/styles/_reboot';
 @import '@/styles/transition';
 @import '@/styles/element-plus';
+@import 'swiper/css';
+@import 'video.js/dist/video-js.min.css';
 
 body {
   font-family: 'Noto Sans TC';
@@ -34,6 +36,9 @@ body {
   height: 100vh;
   // height: calc(var(--vh, 1vh) * 100);
   min-width: 375px;
+  max-width: 414px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 #app {

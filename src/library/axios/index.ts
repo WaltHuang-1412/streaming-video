@@ -5,9 +5,7 @@ import { ElMessage, ElNotification } from 'element-plus'
 // import { isString, isObject } from 'lodash'
 
 const axiosInstance = axios.create({
-  baseURL: process.env.VUE_APP_BASE_URL
-    ? `${process.env.VUE_APP_BASE_URL}/api/`
-    : '/api/',
+  baseURL: 'http://localhost:3000/',
   timeout: 3000
 })
 // Add a request interceptor

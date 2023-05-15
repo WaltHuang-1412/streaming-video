@@ -1,5 +1,9 @@
 @import 'normalize.css';
 
+html {
+  overflow: hidden;
+}
+
 .overflow-dot {
   text-overflow: ellipsis;
   overflow: hidden;
