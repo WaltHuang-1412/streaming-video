@@ -11,7 +11,7 @@
     left: 50%;
     transform: translate(-50%, 0);
     height: 40px;
-    color: white;
+    z-index: 99999;
 
     .line {
       height: 30%;

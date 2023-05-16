@@ -5,7 +5,7 @@ import { ElMessage, ElNotification } from 'element-plus'
 // import { isString, isObject } from 'lodash'
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3000/',
+  baseURL: 'http://172.20.10.6:3000/',
   timeout: 3000
 })
 // Add a request interceptor
