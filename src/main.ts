@@ -5,6 +5,7 @@ import Layouts from './plugins/layouts'
 import './registerServiceWorker'
 import router from './router'
 import { store, storeKey } from './store'
+import 'videojs-contrib-hls'
 
 createApp(App)
   .use(store, storeKey)

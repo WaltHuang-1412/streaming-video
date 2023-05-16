@@ -33,25 +33,11 @@ swiper.for-you(v-if="isArray(data)" direction="vertical")
       .swiper-slide__title {{ item.title }}
       //- video(:ref="`video${index}`").swiper-slide__video
       //-   source(:src="item.play_url")
-      video-player.swiper-slide__video.vjs-big-play-centered(:src='item.player_url'
-                                                              :poster='item.cover'
-                                                              crossorigin='anonymous'
-                                                              playsinline=''
-                                                              controls=''
-                                                              :volume='0.6'
-                                                              :playback-rates='[0.7, 1.0, 1.5, 2.0]'
-                                                              @mounted='handleMounted'
-                                                              @ready='handleEvent($event)'
-                                                              @play='handleEvent($event)'
-                                                              @pause='handleEvent($event)'
-                                                              @ended='handleEvent($event)'
-                                                              @loadeddata='handleEvent($event)'
-                                                              @waiting='handleEvent($event)'
-                                                              @playing='handleEvent($event)'
-                                                              @canplay='handleEvent($event)'
-                                                              @canplaythrough='handleEvent($event)'
-                                                              @timeupdate='handleEvent(player?.currentTime())')
 
+      video-player.swiper-slide__video.vjs-big-play-centered( :src="item.play_url"
+                                                              :currentSrc="item.play_url"
+                                                              :poster='item.cover'
+                                                              :autoplay="true")
 
 </template>
 <script lang="ts">
@@ -72,6 +58,7 @@ export default defineComponent({
       data.value = items
     }
     const player = shallowRef<any>()
+
     const handleMounted = (payload: any) => {
       player.value = payload.player
       console.log('Basic player mounted', payload)
